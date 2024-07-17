@@ -90,7 +90,7 @@ function playRound(HC,CC) {
 }
 
 function playGame() {
-    for (let i = 0;i < 6;i++){
+    for (let i = 0;i < 5;i++){
         console.log(playRound(GetHumanChoice(),ComputerChoice()))
         console.log(Humanscore + " - " + Computerscore)
     }
