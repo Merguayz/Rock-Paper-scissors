@@ -16,22 +16,7 @@ function ComputerChoice() {
           break;
     } 
 
-    return choice
-}
-
-function GetHumanChoice() {
-    let input = prompt("Rock, Paper or Scissors")
-    let player_choice = input.toLowerCase()    
-    while(player_choice != "rock" || player_choice != "paper" || player_choice != "scissors"){
-        if (player_choice === "rock" || player_choice === "paper" || player_choice === "scissors") {
-            break
-        }
-        input = prompt("Rock, Paper or Scissors")
-        player_choice = input.toLowerCase()
-    }
-    
-
-    return player_choice
+    return choice;
 }
 
 let Humanscore = 0
@@ -90,10 +75,15 @@ function playRound(HC,CC) {
 }
 
 function playGame() {
-    for (let i = 0;i < 5;i++){
-        console.log(playRound(GetHumanChoice(),ComputerChoice()))
-        console.log(Humanscore + " - " + Computerscore)
-    }
+    let btns = document.querySelector(".btns");
+    let message = document.querySelector("p.message")
+    let score = document.querySelector("p.score")
+    btns.addEventListener("click",(e)=>{
+        message.textContent = playRound(e.target.id,ComputerChoice())
+        score.textContent = `you:${Humanscore}  ||  computer:${Computerscore}`
+    });
+
+   
 }
 
 playGame()
