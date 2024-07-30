@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#rock , #paper, #scissors {
+    height: 100px;
+    width: 100px;
+}
+
+p {
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 0 0 0;
+    
+}
